@@ -12,5 +12,5 @@ RUN dotnet publish -c Release -o out
 # Build runtime image
 FROM microsoft/dotnet:aspnetcore-runtime
 WORKDIR /DockerTest
-COPY --from=build-env /DockerTest/out .
+COPY --from=build-env /DockerTest/DockerTest/out .
 ENTRYPOINT ["dotnet", "DockerTest.dll"]
