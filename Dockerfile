@@ -14,3 +14,4 @@ FROM microsoft/dotnet:aspnetcore-runtime
 WORKDIR /DockerTest
 COPY --from=build-env /DockerTest/DockerTest/out .
 ENTRYPOINT ["dotnet", "DockerTest.dll"]
+EXPOSE 80/tcp
