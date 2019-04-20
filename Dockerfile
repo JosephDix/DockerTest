@@ -1,5 +1,5 @@
 FROM microsoft/dotnet:sdk AS build-env
-WORKDIR /app
+WORKDIR /DockerTest
 
 # Copy csproj and restore as distinct layers
 COPY *.csproj ./
